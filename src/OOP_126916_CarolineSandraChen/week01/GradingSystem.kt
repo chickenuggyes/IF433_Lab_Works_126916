@@ -6,3 +6,10 @@ fun main() {
 
     println("Nama: " + name + ", Nilai: " + score)
 }
+
+fun main() {
+    var name = "Caroline Sandra"
+    val score = 80
+
+    println("Nama: $name, Nilai: $score")
+}
