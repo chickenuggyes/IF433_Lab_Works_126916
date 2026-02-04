@@ -1,14 +1,7 @@
 package OOP_126916_CarolineSandraChen.week01
 
 fun main() {
-    var name: String = "Caroline Sandra"
-    var score: Int = 80
-
-    println("Nama: " + name + ", Nilai: " + score)
-}
-
-fun main() {
-    var name = "Caroline Sandra"
+    val name = "Caroline Sandra"
     val score = 80
 
     println("Nama: $name, Nilai: $score")
@@ -21,6 +14,10 @@ fun main() {
     }
 
     println("Grade kamu: $grade")
+
+    println("Status: ${calculateStatus(score)}")
 }
+
+fun calculateStatus(score: Int) = if (score > 75) "Lulus" else "Tidak Lulus"
 
 
