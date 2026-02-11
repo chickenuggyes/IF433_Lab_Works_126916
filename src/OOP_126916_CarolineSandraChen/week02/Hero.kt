@@ -3,7 +3,7 @@ package OOP_126916_CarolineSandraChen.week02
 class Hero(
     val name: String,
     val baseDamage: Int,
-    var hp: INT = 100
+    var hp: Int = 100
 ) {
     fun attack(targetName: String){
         println("$name menebas $targetName!")

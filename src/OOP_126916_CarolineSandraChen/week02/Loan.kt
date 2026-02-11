@@ -1,5 +1,7 @@
 package OOP_126916_CarolineSandraChen.week02
 
+import java.util.Scanner
+
 class Loan (
     val bookTitle: String,
     val borrower: String,
@@ -13,8 +15,6 @@ class Loan (
         }
     }
 }
-
-import java.util.Scanner
 
 fun main() {
     val scanner = Scanner(System.`in`)
