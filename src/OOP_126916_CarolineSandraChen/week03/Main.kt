@@ -13,4 +13,16 @@ fun main() {
 
     println("Pajak yang harus dibayar: ${e.tax}")
 
+    // === TEST WEAPON ===
+    println("\n=== Test Weapon ===")
+
+    val w = Weapon("Excalibur")
+
+    w.damage = -50
+    println("Damage setelah set -50: ${w.damage}")
+
+    w.damage = 9999
+    println("Damage setelah set 9999: ${w.damage}")
+
+    println("Tier Weapon: ${w.tier}")
 }
