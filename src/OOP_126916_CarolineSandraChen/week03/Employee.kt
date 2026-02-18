@@ -23,7 +23,6 @@ class Employee(val name: String) {
         println("Karyawan: $name, Rating: $performanceRating")
     }
 
-    // Computed Property
     val tax: Double
         get() = salary * 0.1
 }
