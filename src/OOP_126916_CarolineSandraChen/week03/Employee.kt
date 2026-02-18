@@ -12,17 +12,18 @@ class Employee(val name: String) {
             }
         }
 
-    // PRIVATE PROPERTY (tidak bisa diakses dari luar class)
     private var performanceRating: Int = 3
 
-    // PUBLIC FUNCTION untuk ubah rating secara aman
     fun increasePerformance() {
         performanceRating++
         println("Kinerja $name meningkat! Rating: $performanceRating")
     }
 
-    // FUNCTION untuk melihat status
     fun printStatus() {
         println("Karyawan: $name, Rating: $performanceRating")
     }
+
+    // Computed Property
+    val tax: Double
+        get() = salary * 0.1
 }
