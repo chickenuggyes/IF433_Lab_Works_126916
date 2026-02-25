@@ -23,4 +23,13 @@ fun main(){
     myElectricCar.openTrunk()
     myElectricCar.honk()
     myElectricCar.accelerate()
+
+    println("\n--- Testing Employee Hierarchy ---")
+    val manager = Manager("Budi", 10_000_000)
+    manager.work()
+    println("Bonus ${manager.name}: ${manager.calculateBonus()}")
+
+    val developer = Developer("Siti", 8_000_000, "Kotlin")
+    developer.work()
+    println("Bonus ${developer.name}: ${developer.calculateBonus()}")
 }
