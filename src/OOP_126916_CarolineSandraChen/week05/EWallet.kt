@@ -15,3 +15,5 @@ class EWallet(accountName: String, var balance: Double) : PaymentMethod(accountN
         println("EWallet [\$accountName] top up Rp\${amount.toInt()} sukses. Saldo sekarang: Rp\${balance.toInt()}")
     }
 }
+
+//revisi sedikit jadi prompt ulang
