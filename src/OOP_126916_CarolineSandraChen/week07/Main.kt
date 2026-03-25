@@ -39,4 +39,9 @@ fun main() {
     println("\n=== TEST GAME MANAGER ===")
     GameManager.startGame()
     GameManager.startGame()
+
+    println("\n=== TEST RARITY & FACTORY ===")
+    println("Drop chance LEGENDARY: ${ItemRarity.LEGENDARY.dropChance}%")
+    val starterWeapon = Weapon.forgeStarterSword()
+    println("Starter weapon: ${starterWeapon.item.name}, damage ${starterWeapon.item.damage}, rarity ${starterWeapon.item.rarity}, durability ${starterWeapon.durability}")
 }
