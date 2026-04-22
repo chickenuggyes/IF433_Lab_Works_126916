@@ -34,4 +34,12 @@ fun main() {
     println("\nWorst Performers:")
     worstPerformersString.forEach { println(it) }
 
-    println("\nUnique Pairs: $uniquePairs")}
+    println("\nUnique Pairs: $uniquePairs")
+
+    println("\n=== TEST SUMMARY ===")
+    println("Total Trades: ${tradeHistory.size}")
+    println("Closed Trades: ${closedTrades.size}")
+    println("Winning Trades: ${winningTrades.size}")
+    println("Losing Trades: ${losingTrades.size}")
+}
+
