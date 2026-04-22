@@ -15,10 +15,23 @@ fun main() {
 
     println("\n=== TEST SET ===")
     val uniqueNumbers = setOf(1, 2, 2, 3, 3, 4)
-    println("Unique Numbers (Set): $uniqueNumbers")
+    println("Unique Numbers (Set): $uniqueNumbers") //duplikat hilang
 
     val activeUsers = mutableSetOf("UserA", "UserB")
     activeUsers.add("UserC")
-    activeUsers.add("UserA")
+    activeUsers.add("UserA") //diabaikan karena sudah ada
     println("Active Users: $activeUsers")
+
+    println("\n=== TEST MAP ===")
+    val studentGrades = mapOf(
+        "Alice" to "A",
+        "Bob" to "B",
+        "Charlie" to "A" //value boleh duplikat, key tidak
+    )
+    println("Nilai Bob: ${studentGrades["Bob"]}")
+
+    val inventory = mutableMapOf("Apples" to 50, "Bananas" to 30)
+    inventory["Oranges"] = 20 //menambah data baru
+    inventory["Apples"] = 45 //mengupdate data lama
+    println("Inventory: $inventory")
 }
