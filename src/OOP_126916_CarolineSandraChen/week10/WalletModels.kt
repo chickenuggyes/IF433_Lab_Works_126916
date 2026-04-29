@@ -1,0 +1,15 @@
+package OOP_126916_CarolineSandraChen.week10
+
+interface Named {
+    val name: String
+}
+
+data class Coin(
+    override val name: String,
+    val balance: Double
+) : Named
+
+data class Transaction(
+    val id: String,
+    val amount: Double
+)
