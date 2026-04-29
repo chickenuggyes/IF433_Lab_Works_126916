@@ -29,7 +29,13 @@ fun main() {
     txRepo.add(Transaction("TX002", 500.0))
     txRepo.add(Transaction("TX003", 125.5))
 
-    txRepo.getAll().forEach { transaction ->
+    val txResponse = ApiResponse("200 OK", txRepo.getAll())
+
+    println("Status Transaction Response: ${txResponse.status}")
+
+    txResponse.data.forEach { transaction ->
         println("Transaction ID: ${transaction.id}, Amount: ${transaction.amount}")
     }
+
+    println("\nGeneric crypto architecture berhasil dijalankan tanpa error tipe data.")
 }
