@@ -21,4 +21,15 @@ fun main() {
     searchResult.forEach { coin ->
         println("Found: ${coin.name}, Balance: ${coin.balance}")
     }
+
+    println("\n=== TRANSACTION DATA ===")
+    val txRepo = WalletRepository<Transaction>()
+
+    txRepo.add(Transaction("TX001", 250.0))
+    txRepo.add(Transaction("TX002", 500.0))
+    txRepo.add(Transaction("TX003", 125.5))
+
+    txRepo.getAll().forEach { transaction ->
+        println("Transaction ID: ${transaction.id}, Amount: ${transaction.amount}")
+    }
 }
