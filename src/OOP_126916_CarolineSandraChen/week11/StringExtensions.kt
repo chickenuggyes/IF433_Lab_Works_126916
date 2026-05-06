@@ -9,3 +9,8 @@ fun String.addGreeting(): String {
 fun String.repeatTimes(n: Int): String {
     return this.repeat(n)
 }
+
+// Extension function dengan nullable receiver
+fun String?.isNullOrEmptyCustom(): Boolean {
+    return this == null || this.isEmpty()
+}
