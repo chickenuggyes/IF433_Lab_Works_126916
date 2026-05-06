@@ -48,4 +48,9 @@ fun main(){
     }
 
     println("Total daya seluruh perangkat: $totalPower Watt")
+
+    println("\n=== FULL SMART HOME CONFIGURATION PIPELINE ===")
+    homeDevices.forEach {
+        println(it.diagnose())
+    }
 }
