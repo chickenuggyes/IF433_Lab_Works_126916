@@ -27,4 +27,14 @@ fun main() {
     with(user) {
         println("User Detail -> Nama: $name, Umur: $age")
     }
+
+    println("\n=== TEST APPLY + ALSO ===")
+    val configuredUser = User().apply {
+        name = "Olin"
+        age = 20
+    }.also {
+        println("User berhasil dikonfigurasi: $it")
+    }
+
+    println("Final User: $configuredUser")
 }
