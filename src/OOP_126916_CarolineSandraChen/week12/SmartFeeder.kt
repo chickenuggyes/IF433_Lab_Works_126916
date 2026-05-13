@@ -22,4 +22,20 @@ fun dispenseKibble(
 
 fun main() {
     var currentKibbleStock = 50
+
+    println("=== JADWAL MAKAN PAGI ===")
+
+    try {
+        currentKibbleStock = dispenseKibble(
+            requestedGram = 80,
+            availableGram = currentKibbleStock,
+            isJammed = false
+        )
+    } catch (e: DispenserJamException) {
+        println("Peringatan Hardware: ${e.message}")
+    } catch (e: FoodEmptyException) {
+        println("Peringatan Stok: ${e.message}")
+    } catch (e: Exception) {
+        println("Peringatan Umum: ${e.message}")
+    }
 }
