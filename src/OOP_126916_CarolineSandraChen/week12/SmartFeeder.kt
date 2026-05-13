@@ -37,5 +37,7 @@ fun main() {
         println("Peringatan Stok: ${e.message}")
     } catch (e: Exception) {
         println("Peringatan Umum: ${e.message}")
+    } finally {
+        println("Siklus pengecekan dispenser pagi selesai.")
     }
 }
