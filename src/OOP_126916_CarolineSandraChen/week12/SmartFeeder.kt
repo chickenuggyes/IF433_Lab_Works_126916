@@ -46,7 +46,7 @@ fun main() {
 
     runCatching {
         dispenseKibble(
-            requestedGram = 30,
+            requestedGram = 50,
             availableGram = 1000,
             isJammed = false
         )
