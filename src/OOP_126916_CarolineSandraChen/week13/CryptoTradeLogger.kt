@@ -1,5 +1,8 @@
 package OOP_126916_CarolineSandraChen.week13
 
+import java.io.File
+import java.io.FileNotFoundException
+
 data class TradeRecord(
     val id: Int,
     val symbol: String,
@@ -25,5 +28,13 @@ fun fromCsvTrade(line: String): TradeRecord? {
     } catch (e: Exception) {
         println("(Log) Data korup diabaikan: $line")
         null
+    }
+}
+
+fun saveTrades(trades: List<TradeRecord>, path: String) {
+    File(path).printWriter().use { writer ->
+        trades.forEach {
+            writer.println(it.toCsv())
+        }
     }
 }
